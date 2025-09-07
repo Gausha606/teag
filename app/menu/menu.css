@@ -1,0 +1,21 @@
+#menu-card{
+  position: relative;
+  z-index: 1;
+}
+
+#menu-card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('/images/menu.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0,0,0,0.7); 
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  z-index: -1;   
+} 

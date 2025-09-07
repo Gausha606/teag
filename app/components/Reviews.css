@@ -1,0 +1,37 @@
+.card3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.card3::before {
+  content: ''; /* Pseudo-element के लिए आवश्यक */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1); /* पूरी तरह से transparent white */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition के लिए */
+  z-index: 2; /* background image और content के बीच */
+}
+
+.card3:hover::before {
+  background-color: rgba(0, 0, 0, 0.7);
+   /* Hover करने पर 60% opaque black */
+}
+
+/* आपकी मौजूदा classes, बिना opacity के */
+.card-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* z-index को 1 पर रखें */
+}
+
+.card-content {
+  position: relative;
+  z-index: 3; /* इसे ::before element के ऊपर रखें */
+}

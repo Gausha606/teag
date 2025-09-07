@@ -1,0 +1,69 @@
+import Image from "next/image";
+import hero from "../app/download/20.png";
+// import Carousel1 from "./components/Carousel1";
+import Reviews from "./components/Reviews";
+import "./globals.css";
+import Menuimage from "./components/Menu-image";
+import Bts from "./components/bts";
+import OurStory from "./components/OurStory";
+import Littlebox from "./components/littlebox";
+import Carousel1 from "./components/Carousel1";
+import Accordion from "./components/Accordion";
+
+
+
+export default function Home() {
+
+  return (
+    <div >
+      {/* Hero section */}
+      <div  className="relative">
+        {/* <Image
+          src={hero}
+          alt="Teagather location image"
+          className="h-[580px]"
+        /> */}
+      <Carousel1 />
+
+        <h2 className=" abcd absolute top-48 left-110 text-black montserrat text-3xl bg-white p-2">
+          <span>Welcome to Teagather Grand</span>
+        </h2>
+        <h2 className=" absolute top-68 left-55 w-[950px] text-center text-white montserrat shadow-5xl !text-2xl">
+          <span>
+            Experience culinary artistry where exceptional ingredients meet
+            passionate craftsmanship
+          </span>
+        </h2>
+        <button className="absolute top-90 left-145 px-4 cursor-pointer py-2 bg-[#A84D06] !rounded-lg text-white montserrat hover:shadow-2xl hover:scale-105 duration-300 ease-in-out">
+          Explore Our Menu
+        </button>
+      </div>
+
+
+      {/* Our Story */}
+      <OurStory />
+
+      {/* Menu image card */}
+      <Menuimage />
+
+
+      {/* carousel */}
+      {/* <Carousel1 /> */}
+
+      {/* Behind The Scenes */}
+      <Bts />
+
+      {/* littlebox */}
+      <Littlebox />
+
+      {/* happy reviews */}
+      <Reviews />
+
+      {/* Accordion */}
+      <Accordion />
+
+      
+    </div>
+  );
+}
+
