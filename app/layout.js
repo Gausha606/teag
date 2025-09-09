@@ -3,7 +3,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { ReactLenis } from 'lenis/react'; // Import ReactLenis and useLenis
 import 'lenis/dist/lenis.css'; // Import Lenis CSS
-import ScrollToTop from "./components/scrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 
 export default function RootLayout({ children,modal }) {

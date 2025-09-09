@@ -13,7 +13,7 @@ export default function Header() {
     <div className="text-white max-w-7xl mx-auto px-6 sm:px-8 "> 
     <div className=" flex justify-between items-center  py-3 montserrat ">
       {/* logo and name  */}
-      <Link href="/" className="flex items-center ml-6 !gap-2 no-underline  ">
+      <Link href="/" className="flex items-center gap-2 no-underline  ">
         <Image src={img} alt="Teagather Logo" width={20} />
         <p className=" font-semibold poppins text-xl m-0 text-white">Teagather Grand</p>
       </Link>

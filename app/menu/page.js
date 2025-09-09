@@ -43,7 +43,7 @@ export default function page() {
 
       <div className="sticky top-18 z-50  bg-white shadow-lg w-full">
         <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
-          <nav className="flex space-x-8 ml-12 overflow-x-auto py-3 text-black">
+          <nav className="flex space-x-8 overflow-x-auto py-3 text-black">
             <Link
               href="#beverages"
               className="text-black"
