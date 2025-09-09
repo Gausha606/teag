@@ -10,7 +10,9 @@ import Littlebox from "./components/littlebox";
 import Carousel1 from "./components/Carousel1";
 import Accordion from "./components/Accordion";
 
-
+export const metadata = {
+  title: "Home",
+}
 
 export default function Home() {
 

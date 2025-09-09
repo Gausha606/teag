@@ -8,7 +8,31 @@ import MainCourseCarousel from "../components/MainCourseCarousel copy";
 import "./menu.css";
 import bgImage from "../../public/images/menu.jpg";
 
-
+export const metadata = {
+  title: "Our Menu",
+  description:
+    "Explore the full menu of Teagather Grand, featuring a wide variety of starters, main courses, and refreshing beverages.",
+  openGraph: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/menupage.png",
+        width: 1200,
+        height: 630,
+        alt: "A selection of our signature dishes and beverages.",
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/menupage.png",
+        width: 1200,
+        height: 630,
+        alt: "A selection of our signature dishes and beverages.",
+      },
+    ],
+  },
+};
 
 export default function page() {
   return (
@@ -37,7 +61,13 @@ export default function page() {
             Discover dishes crafted with passion, featuring the finest seasonal
             ingredients and time-honored techniques
           </p>
-          <Image src={intro} width={700} height={380} alt="intro page" className="pb-12"/>
+          <Image
+            src={intro}
+            width={700}
+            height={380}
+            alt="intro page"
+            className="pb-12"
+          />
         </div>
       </div>
 
@@ -68,7 +98,7 @@ export default function page() {
       </div>
 
       <div id="menu-card">
-         <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+        <div className="absolute top-0 left-0 w-full h-full z-[-1]">
           <Image
             src={bgImage}
             alt="Background of restaurant"

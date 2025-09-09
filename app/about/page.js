@@ -6,6 +6,32 @@ import React from "react";
 import bgImage from "/public/images/16.png";
 import "./about.css";
 
+export const metadata = {
+  title: "About Us",
+  description:
+    "Learn about the philosophy of Teagather Grand, and meet our passionate owners and find out our other activity areas.",
+  openGraph: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/aboutpage.png",
+        width: 1200,
+        height: 630,
+        alt: "Our dedicated team at Teagather Grand.",
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/aboutpage.png",
+        width: 1200,
+        height: 630,
+        alt: "Our dedicated team at Teagather Grand.",
+      },
+    ],
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="bg-neutral-50  montserrat text-stone-800">

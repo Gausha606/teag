@@ -9,6 +9,32 @@ import SocialMedia from "../components/SocialMedia";
 import bgImage from "/public/images/19.png";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Teagather Grand. Find our address, phone number, and send us a message for reservations or inquiries.",
+  openGraph: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/contactpage.png",
+        width: 1200,
+        height: 630,
+        alt: "Get in touch with us at Teagather Grand. Our team is here to assist with reservations, inquiries, or any special requests. We’re located in the heart of Gwalior.",
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: "https://teag.netlify.app/images/contactpage.png",
+        width: 1200,
+        height: 630,
+        alt: "Get in touch with us at Teagather Grand. Our team is here to assist with reservations, inquiries, or any special requests. We’re located in the heart of Gwalior.",
+      },
+    ],
+  },
+};
+
 export default function page() {
   return (
     <div className="mt-16">
