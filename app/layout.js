@@ -6,6 +6,21 @@ import 'lenis/dist/lenis.css'; // Import Lenis CSS
 import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata = {
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'android-chrome-192x192',
+        url: '/android-chrome-192x192.png',
+      },
+      {
+        rel: 'android-chrome-512x512',
+        url: '/android-chrome-512x512.png',
+      },
+    ],
+  },
   title: 
   {
     template: '%s | Teagather Grand',
