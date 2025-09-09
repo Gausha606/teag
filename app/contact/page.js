@@ -38,7 +38,7 @@ export default function page() {
       </div>
 
       {/* button - contact section */}
-      <div className="flex justify-between min-h-screen montserrat ">
+      <div className="max-w-7xl mx-auto montserrat flex justify-between ">
         {/* button/map section */}
         <div className="flex flex-col justify-center items-center gap-4 p-8">
           <div className="flex gap-4">

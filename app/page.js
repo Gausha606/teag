@@ -18,25 +18,24 @@ export default function Home() {
     <div >
       {/* Hero section */}
       <div  className="relative">
-        {/* <Image
-          src={hero}
-          alt="Teagather location image"
-          className="h-[580px]"
-        /> */}
-      <Carousel1 />
 
-        <h2 className=" abcd absolute top-48 left-110 text-black montserrat text-3xl bg-white p-2">
-          <span>Welcome to Teagather Grand</span>
-        </h2>
-        <h2 className=" absolute top-68 left-55 w-[950px] text-center text-white montserrat shadow-5xl !text-2xl">
-          <span>
-            Experience culinary artistry where exceptional ingredients meet
-            passionate craftsmanship
-          </span>
-        </h2>
-        <button className="absolute top-90 left-145 px-4 cursor-pointer py-2 bg-[#A84D06] !rounded-lg text-white montserrat hover:shadow-2xl hover:scale-105 duration-300 ease-in-out">
-          Explore Our Menu
-        </button>
+      <Carousel1 />
+       <div className="max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center z-20">
+        <div className="flex justify-center items-center flex-col montserrat text-center space-y-4">
+            <h2 className=" text-black text-3xl md:text-5xl font-bold bg-white p-2">
+                <span>Welcome to Teagather Grand</span>
+            </h2>
+            <h2 className="w-full max-w-3xl text-white montserrat text-xl md:text-2xl">
+                <span>
+                    Experience culinary artistry where exceptional ingredients meet
+                    passionate craftsmanship
+                </span>
+            </h2>
+            <button className="px-6 py-2 bg-[#A84D06] !rounded-lg text-white montserrat hover:shadow-2xl hover:scale-105 duration-300 ease-in-out">
+                Explore Our Menu
+            </button>
+        </div>
+    </div>
       </div>
 
 

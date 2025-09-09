@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function SocialMedia() {
   return (
-    <div className="min-h-screen mt-12 montserrat">
+    <div className="max-w-7xl mx-auto mt-12 montserrat">
       <div>
         <h2 className="!text-5xl !font-bold text-center bg-gradient-to-r from-[#A84D06] to-[#533218de] !bg-clip-text !text-transparent">
           Reach Out To US

@@ -67,9 +67,9 @@ export default function ReservePage() {
   };
 
   return (
-    <div className="bg-[#2d2d2d]  h-[1750px]">
+    <div className="bg-[#2d2d2d] pb-12">
       <section
-        className="relative pt-24 pb-16 bg-gradient-to-br from-[#FEF7F0] to-[#F4F6F0] h-screen"
+        className="relative pt-12 bg-gradient-to-br from-[#FEF7F0] to-[#F4F6F0] h-[450px]"
         id="reserve-card"
       >
           <div className="absolute top-0 left-0 w-full h-full z-[-1]">
@@ -94,14 +94,14 @@ export default function ReservePage() {
               Secure your spot for an unforgettable culinary journey where every
               detail is crafted to perfection
             </p>
-            <div className="cursor-pointer scroll-mt-12">
-            <IoIosArrowDown className="!text-[72px] mt-10 animate-bounce" onClick={scrollToSection} />
+            <div className="cursor-pointer scroll-mt-1">
+            <IoIosArrowDown className="!text-[72px] mt-6 animate-bounce" onClick={scrollToSection} />
             </div>
           </div>
         </div>
       </section>
 
-         <section id="reserve-form" className="pb-16 pt-24 montserrat text-white ">
+         <section id="reserve-form" className="pb-4 pt-20 montserrat text-white ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-1">
                 <h2 className="text-white text-3xl md:text-4xl !font-bold  !mb-6">
@@ -114,7 +114,7 @@ export default function ReservePage() {
             </div>
             </section>
 
-      <div className="max-w-4xl mx-auto  bg-[#F5F1EB] p-12 h-[790px] rounded-xl montserrat ">
+      <div className="max-w-4xl mx-auto  bg-[#F5F1EB] p-12 h-[800px] rounded-xl montserrat ">
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           {/* date & time selection */}
           <div className="flex justify-between">

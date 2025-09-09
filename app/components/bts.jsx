@@ -11,6 +11,7 @@ import Image from "next/image";
 export default function Bts() {
   return (
     <div className="pb-24 bg-[#F5F1EB] ">
+      <div className="max-w-7xl mx-auto">
       <p className="text-center text-5xl pt-12 font-bold text-gray-900 poppins">
         Behind The Scenes
       </p>
@@ -59,6 +60,7 @@ export default function Bts() {
           alt="post2"
           className="hover:scale-105 duration-300 ease-in-out rounded-sm"
         />
+      </div>
       </div>
     </div>
   );

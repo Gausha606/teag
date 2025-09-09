@@ -11,13 +11,13 @@ import "./Carousel.css";
 
 export default function Carousel1() {
   return (
-    <div className="w-full relative mt-18 bg-black">
-      <div className="carousel rounded-lg">
-        <Carousel interval={3000} className="px-2 py-2 ">
+    <div className=" relative mt-18 bg-white">
+      <div className="carousel max-w-[1320px] mx-auto rounded-lg ">
+        <Carousel interval={3000} className="py-2 ">
           {/* Added margin-bottom for spacing */}
           <Carousel.Item>
             <Image
-              className="d-block w-100 rounded-lg"
+              className="!w-full rounded-lg"
               src={un1}
               alt="teagather image"
               style={{ height: "570px", objectFit: "cover" }} // Added height and object-fit
@@ -30,7 +30,7 @@ export default function Carousel1() {
 
           <Carousel.Item>
             <Image
-              className="d-block w-100 rounded-lg"
+              className="w-full rounded-lg"
               src={un2}
               alt="teagather image"
               style={{ height: "570px", objectFit: "cover" }}
@@ -43,7 +43,7 @@ export default function Carousel1() {
 
           <Carousel.Item>
             <Image
-              className="d-block w-100 rounded-lg"
+              className="w-full rounded-lg"
               src={un3}
               alt="teagather image"
               style={{ height: "570px", objectFit: "cover" }}
@@ -56,7 +56,7 @@ export default function Carousel1() {
 
           <Carousel.Item>
             <Image
-              className="d-block w-100 rounded-lg"
+              className="w-full rounded-lg"
               src={un4}
               alt="teagather image"
               style={{ height: "570px", objectFit: "cover" }}
@@ -69,7 +69,7 @@ export default function Carousel1() {
 
           <Carousel.Item>
             <Image
-              className="d-block w-100 rounded-lg"
+              className="w-full rounded-lg"
               src={un5}
               alt="teagather image"
               style={{ height: "570px", objectFit: "cover" }}

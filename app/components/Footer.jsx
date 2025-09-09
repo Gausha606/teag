@@ -7,15 +7,16 @@ import youtube from "../../public/youtube.png";
 import ig from "../../public/ig.png";
 import Link from "next/link";
 import GoToTop from "./GoToTop";
-import { MdOutlineArrowRight } from "react-icons/md";
+import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import Address from "./Address";
 
 
 
 export default function Footer() {
   return (
-    <div className="bg-[#533218de] py-4  montserrat">
-      <div className=" text-white py-4  flex  justify-around  flex-row gap-8 inter">
+    <footer className="bg-[#533218de] ">
+    <div className="max-w-7xl mx-auto py-4  montserrat">
+      <div className=" text-white py-4  flex  justify-evenly  flex-row gap-12 inter">
         {/* logo-name-icons */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center  gap-3">
@@ -86,25 +87,25 @@ export default function Footer() {
         {/* quick links */}
         <div className=" montserrat">
           <p className="font-bold text-lg mb-4">Quick Links</p>
-          <ul className="flex flex-col gap-3  m-0 p-0 px-0.5">
-            <li>
+          <ul className="flex flex-col gap-3  m-0 p-0 px-0.5 ">
+            <li className="group">
               <Link href="/" className="text-white no-underline flex items-center hover:scale-105 duration-300 ease-in-out">
-                 <MdOutlineArrowRight/> Home
+                 <MdOutlineArrowLeft className="group-hover:rotate-180 duration-300 ease-in-out"/> Home
               </Link>
             </li>
-              <li>
+              <li className="group">
               <Link href="/menu" className="text-white no-underline flex items-center hover:scale-105 duration-300 ease-in-out">
-               <MdOutlineArrowRight/> Menu
+               <MdOutlineArrowLeft className="group-hover:rotate-180 duration-300 ease-in-out"/> Menu
               </Link>
             </li>
-            <li>
+            <li className="group">
               <Link href="/about" className="text-white no-underline flex items-center hover:scale-105 duration-300 ease-in-out">
-                <MdOutlineArrowRight/> About
+                <MdOutlineArrowLeft className="group-hover:rotate-180 duration-300 ease-in-out"/> About
               </Link>
             </li>
-            <li>
+            <li className="group">
               <Link href="/contact" className="text-white no-underline flex items-center hover:scale-105 duration-300 ease-in-out">
-                <MdOutlineArrowRight/> Contact
+                <MdOutlineArrowLeft className="group-hover:rotate-180 duration-300 ease-in-out"/> Contact
               </Link>
             </li>
           
@@ -246,5 +247,6 @@ export default function Footer() {
 
       <GoToTop />
     </div>
+    </footer>
   );
 }

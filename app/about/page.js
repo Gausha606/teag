@@ -8,10 +8,10 @@ import "./about.css";
 
 export default function AboutPage() {
   return (
-    <div className="bg-neutral-50 min-h-screen montserrat text-stone-800">
+    <div className="bg-neutral-50  montserrat text-stone-800">
       {/* Hero Section */}
       <section
-        className="relative !h-[70vh] flex items-center justify-center text-center p-6 bg-cover bg-center"
+        className="relative h-[450px] flex items-center justify-center text-center p-6 bg-cover bg-center"
         id="about-card"
       >
         <div className="absolute top-0 left-0 w-full h-full z-[-1]">
@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story & Philosophy Section */}
-      <section className="py-24 px-6 bg-neutral-50">
+      <section className="py-12 px-6 bg-neutral-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 ease-in-out">
             <Image

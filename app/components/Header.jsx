@@ -9,10 +9,11 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   return (
-    <div className="text-white w-full fixed top-0 z-50 "> 
-    <div className=" flex justify-between items-center  bg-[#2c2c2c] shadow-2xl px-8 py-3 montserrat ">
+    <header className="fixed top-0 z-50 w-full bg-[#2c2c2c] shadow-2xl">
+    <div className="text-white max-w-7xl mx-auto px-6 sm:px-8 "> 
+    <div className=" flex justify-between items-center  py-3 montserrat ">
       {/* logo and name  */}
-      <Link href="/" className="flex items-center  gap-3 no-underline  ">
+      <Link href="/" className="flex items-center ml-6 !gap-2 no-underline  ">
         <Image src={img} alt="Teagather Logo" width={20} />
         <p className=" font-semibold poppins text-xl m-0 text-white">Teagather Grand</p>
       </Link>
@@ -43,5 +44,6 @@ export default function Header() {
 
     </div>
     </div>
+    </header>
   );
 }
