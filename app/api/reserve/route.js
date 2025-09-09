@@ -24,14 +24,14 @@ export async function POST(request) {
       port: 465,
       secure: true,
       auth: {
-        user: "sharmagaurav6926@gmail.com",
-        pass: "tuce qflw qtsv ykfu",
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
     // Email content
     const mailOptions = {
-      from: "sharmagaurav6926@gmail.com",
+      from: process.env.GMAIL_USER,
       to: email, // User ka email
       subject: "Your Reservation is Confirmed!",
       html: `
@@ -173,8 +173,8 @@ color: #A84D06
 
     // Email content for owner
     const OwnerMailInfo = {
-      from: "sharmagaurav6926@gmail.com",
-      to: "gauravdl91197@gmail.com", // owner ka email
+      from: process.env.GMAIL_USER,
+      to: process.env.OWNER_GMAIL, // owner ka email
       subject: "New Reservation Confirmed!",
       html: `
        <!DOCTYPE html>
@@ -286,8 +286,8 @@ color: #A84D06
 
     // **Telegram Bot credentials**
 
-    const telegramBotToken = "8441706499:AAFiu6tfI2y21FjY4RyqZRrwEidJRPWwPSc"; // यहां अपना टोकन डालें
-    const ownerChatId = "949157779"; // यहां अपनी चैट ID डालें // **Telegram message for the business owner**
+    const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN; // यहां अपना टोकन डालें
+    const ownerChatId = process.env.OWNER_CHAT_ID; // यहां अपनी चैट ID डालें // **Telegram message for the business owner**
 
     const telegramMessage = `
     ✨🍽 New Table Booking Alert! 🍽✨
