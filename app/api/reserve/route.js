@@ -15,7 +15,7 @@ export async function POST(request) {
       guests,
       occasion,
       phone,
-      request: specialRequest,
+      demand
     } = data;
 
     // Nodemailer transporter setup (Gmail ka example)
@@ -24,8 +24,9 @@ export async function POST(request) {
       port: 465,
       secure: true,
       auth: {
+        
         user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
+        pass:process.env.GMAIL_PASS,
       },
     });
 
@@ -155,7 +156,8 @@ color: #A84D06
                 <li><strong>Phone:</strong> ${phone}</li>
                 <li><strong>Guests:</strong> ${guests}</li>
                 <li><strong>Occasion:</strong> ${occasion}</li>
-                <li><strong>Special Request:</strong> ${specialRequest}</li>
+                <li><strong>Demand:</strong> ${demand}</li>
+
             </ul>
             
             <p style="color: #333;">For any changes or questions, please contact us directly at <a href="tel:9981148990"> 99811-48990, <a href="tel:8269925555">82699-25555</a> or <a href="mailto:teagathergrand@gmail.com ">teagathergrand@gmail.com.</a></p>
@@ -272,7 +274,7 @@ color: #A84D06
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Guests:</strong> ${guests}</p>
       <p><strong>Occasion:</strong> ${occasion}</p>
-      <p><strong>Special Request:</strong> ${specialRequest}</p>
+      <p><strong>Demand:</strong> ${demand}</p>
       <p style="color: #333;">Please ensure all necessary preparations are made for this reservation.</p>
     </div>
     <div class="footer">
@@ -299,33 +301,27 @@ color: #A84D06
 ⏰ Time: ${time}
 👥 Guests: ${guests} People
 🎉 Occasion: ${occasion}
-📝 Special Request: ${specialRequest}
+🎉 Demand: ${demand}
+
         `;
 
-    await Promise.all([
-      transporter.sendMail(mailOptions),
-      transporter.sendMail(OwnerMailInfo),
+   await transporter.sendMail(mailOptions);
+    await transporter.sendMail(OwnerMailInfo);
+    
+    await axios.post(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+      chat_id: ownerChatId,
+      text: telegramMessage,
+      parse_mode: "Markdown",
+    });
 
-      axios.post(
-        `https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
-
-        {
-          chat_id: ownerChatId,
-          text: telegramMessage,
-          parse_mode: "Markdown",
-        }
-      ),
-    ]);
-
-    console.log("Reservation confirmed and email sent.");
     return NextResponse.json(
-      { message: "Reservation confirmed please check  your gmail." },
+      { message: "Reservation confirmed! Please check your email." },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error processing reservation or sending email:", error);
+    console.error("ASLI ERROR YE HAI:", error.message); // Terminal check karein
     return NextResponse.json(
-      { message: "Reservation failed." },
+      { message: "Reservation failed: " + error.message },
       { status: 500 }
     );
   }

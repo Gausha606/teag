@@ -13,7 +13,7 @@ export default function ReservationPage() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
-  const [request, setRequest] = useState("");
+  const [demand, setDemand] = useState("");
   const [message, setMessage] = useState("");
   const [occasion, setOccasion] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +36,7 @@ export default function ReservationPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, date, time, guests, occasion, phone, request,message}),
+        body: JSON.stringify({ name, email, date, time, guests, occasion, phone, demand,message}),
       });
 
       const data = await response.json();
@@ -51,7 +51,7 @@ export default function ReservationPage() {
         setPhone("");
         setOccasion("");
         setGuests("");
-        setRequest("");
+        setDemand("");
         setTimeout(() => {
           setMessage("");
         }, 5000);
@@ -357,8 +357,8 @@ export default function ReservationPage() {
               </svg>
                 Special Requests & Dietary Needs
               </label>
-              <textarea type="message" id="message" rows={4} name="message" className="py-2 px-4 border w-[800px]  border-black rounded-lg text-lg" placeholder="Please let us know about any dietary restrictions, allergies, seating preferences, or special celebration details..." value={request}
-                onChange={(e) => setRequest(e.target.value)}/>
+              <textarea type="message" id="message" rows={4} name="message" className="py-2 px-4 border w-[800px]  border-black rounded-lg text-lg" placeholder="Please let us know about any dietary restrictions, allergies, seating preferences, or special celebration details..." value={demand}
+                onChange={(e) => setDemand(e.target.value)}/>
             </div>
           </div>
 
