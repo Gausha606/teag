@@ -71,7 +71,7 @@ export default function Reviews() {
         start: "top 50%",
         end: "30% center",
         scrub: true,
-        markers: true
+      
       }
     })
 
