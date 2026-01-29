@@ -70,6 +70,7 @@ export default function RootLayout({ children,modal }) {
     <html lang="en">
       <body cz-shortcut-listen="true" className="bg-white">
         <ReactLenis root options={{ lerp: 0.01, duration: 1.2, smoothTouch: true }} >
+          <div id="cursor"></div>
         <div className="relative min-h-screen flex flex-col">
         <Header />
         <ScrollToTop />

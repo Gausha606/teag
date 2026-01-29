@@ -1,13 +1,50 @@
-"use client"
-import React, { useState } from "react";
-import arrow from "../download/arrow.png"
-import Image from "next/image"
+"use client";
+import React, { useRef, useState } from "react";
+import arrow from "../download/arrow.png";
+import Image from "next/image";
 import "./Accordian.css";
-import bgImage from "/public/images/16.png"; 
-
+import bgImage from "/public/images/16.png";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Accordion() {
   const [selected, setSelected] = useState(null);
+  const containerRef = useRef();
+  const hedRef = useRef()
+  const questionRef = useRef([]);
+
+  useGSAP(() => {
+    gsap.from(hedRef.current,{
+      x:-100,
+      opacity: 0,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: hedRef.current,
+        scroller: "body",
+       start: "top 80%",
+        toggleActions: "play none none none"
+      },
+    })
+
+    questionRef.current.forEach((item, index) => {
+    gsap.from(item, {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      delay: index * 0.15,
+      scrollTrigger: {
+        trigger: item,
+        scroller: "body",
+        start: "top 85%",
+        toggleActions: "play none none none",
+
+      },
+    });
+  });
+ 
+  },[]);
 
   const toggle = (i) => {
     if (selected === i) {
@@ -18,36 +55,38 @@ export default function Accordion() {
 
   return (
     <div
-      className=" pt-12  h-[520px] sm:h-[500px] overflow-hidden bg-black" id="card2"
-      // data-aos="fade-up"
+      className=" pt-12  h-[520px] sm:h-[500px] overflow-hidden bg-black"
+      id="card2"
+      ref={containerRef}
     >
       <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-                <Image
-                  src={bgImage}
-                  alt="Background of restaurant"
-                  fill
-                  style={{
-                    objectFit: "cover",
-                    backgroundAttachment: "fixed",
-                  }}
-                />
-                {/* Overlay div on top of the image */}
-                <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
-          </div>
-      <p className="inter text-lg sm:text-3xl font-semibold text-center text-white mb-4">
+        <Image
+          src={bgImage}
+          alt="Background of restaurant"
+          fill
+          style={{
+            objectFit: "cover",
+            backgroundAttachment: "fixed",
+          }}
+        />
+        {/* Overlay div on top of the image */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
+      </div>
+      <p className="inter text-lg sm:text-3xl font-semibold text-center text-white mb-4" ref={hedRef}>
         FAQ (Frequently Asked Questions)
       </p>
-      <div className="px-1 sm:px-0 py-2 block justify-start sm:flex sm:justify-center items-center">
+      <div className="px-1 sm:px-0 py-2 block justify-start sm:flex sm:justify-center items-center ">
         <div className="">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
-                className="item pl-4 py-1 sm:pl-8 bg-white text-black mb-2 w-[380px] sm:w-[1200px] rounded-lg "
+                className="item pl-4 py-1 sm:pl-8 bg-white text-black mb-2 group w-[380px] sm:w-[1200px] rounded-lg hover:!bg-slate-50" ref={el=>(questionRef.current[index]=el)}
+              
               >
                 <div
-                  className="question montserrat text-sm  sm:text-lg  py-2 font-medium  flex justify-between  items-start w-[380px] sm:w-full cursor-pointer"
-                  onClick={() => toggle(index)}
+                  className="question montserrat text-sm  sm:text-lg  py-2 font-medium  flex justify-between  items-start w-[380px] sm:w-full cursor-pointer "
+                  onClick={() => toggle(index)} 
                 >
                   {item.question}
                   {/* + - icon  */}
@@ -69,15 +108,15 @@ export default function Accordion() {
                   {/* up down image icon  */}
 
                   <span
-                    className="pr-7 sm:pr-8 text-lg sm:text-2xl   transition-[image] duration-500 ease-in-out"
+                    className="pr-7 sm:pr-8 text-lg sm:text-2xl   transition-[image] duration-500 ease-in-out "
                     onClick={() => toggle(index)}
                   >
                     <Image
                       src={arrow}
                       alt=""
                       className={`${
-                        selected === index ? "rotate-[-180deg]" : "rotate-0"
-                      } w-5 max-w-[24px] pt-1  transition-transform duration-300 ease-in-out`}
+                        selected === index ? "rotate-[-180deg] " : "rotate-0"
+                      } w-5 max-w-[24px] pt-1  transition-transform duration-300 ease-in-out  group-hover:scale-150`}
                     />
                   </span>
                 </div>

@@ -10,7 +10,7 @@ export default function Address() {
     <>
       <button
         onClick={() => setShowMapModal(true)}
-        className="w-[200px] text-left"
+        className="w-[200px] text-left cursor-pointer"
       >
         New Collectorate Road, Model Town, Gwalior
       </button>

@@ -9,6 +9,7 @@ import OurStory from "./components/OurStory";
 import Littlebox from "./components/littlebox";
 import Carousel1 from "./components/Carousel1";
 import Accordion from "./components/Accordion";
+import PinnedComponent from "./components/pinnedComment";
 
 export const metadata = {
   title: "Home",
@@ -46,10 +47,6 @@ export default function Home() {
 
       {/* Menu image card */}
       <Menuimage />
-
-
-      {/* carousel */}
-      {/* <Carousel1 /> */}
 
       {/* Behind The Scenes */}
       <Bts />
