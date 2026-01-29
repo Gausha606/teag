@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import arrow from "../download/arrow.png";
 import Image from "next/image";
 import "./Accordian.css";
-import bgImage from "/public/images/16.png";
+import bgImage from "../../public/images/16.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

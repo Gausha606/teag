@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import bgImage from "/public/images/16.png";
+import bgImage from "../../public/images/16.png";
 import "./about.css";
 
 export const metadata = {

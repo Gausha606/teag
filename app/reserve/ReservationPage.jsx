@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "./reserve.css";
 import { IoIosArrowDown } from "react-icons/io";
-import bgImage from "/public/images/20.png";
+import bgImage from "../../public/images/20.png";
 import Image from "next/image";
 
 export default function ReservationPage() {

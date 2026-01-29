@@ -7,7 +7,7 @@ import intro from "../download/intro.png";
 import starters from "../download/starters.png";
 import mc from "../download/mc.png";
 import Link from "next/link";
-import bgImage from "/public/images/19.png"; 
+import bgImage from "../../public/images/19.png"; 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

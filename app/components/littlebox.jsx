@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import "./littlebox.css"
 import Image from 'next/image'
-import bgImage from "/public/images/dish.jpg"; 
+import bgImage from "../../public/images/dish.jpg"; 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

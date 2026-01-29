@@ -20,7 +20,7 @@ export default function Header() {
 
       {/* nav links */}
       <nav className="flex gap-8 items-center justify-center">
-        <ul className="flex gap-12 poppins m-0">
+        <ul className="flex gap-12 montserrat m-0">
           <li>
             <Link href="/" className={`${pathname==="/" ? "navBarActive" :"navBarInActive"}`} >Home</Link>
           </li>

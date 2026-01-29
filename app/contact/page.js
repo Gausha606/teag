@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import ContactForm from "../components/ContactForm";
 import SocialMedia from "../components/SocialMedia";
-import bgImage from "/public/images/19.png";
+import bgImage from "../../public/images/19.png";
 import Image from "next/image";
 
 export const metadata = {
