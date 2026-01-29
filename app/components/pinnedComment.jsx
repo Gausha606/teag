@@ -22,7 +22,6 @@ export default function PinnedComponent() {
         end: "+=1500", // 1500px ki scrolling ke liye pin rahega
         pin: true, // Element ko screen par pin kar do
         scrub: false, // Animation ek baar mein chalega, scrubbing nahi hogi
-        markers: true, // Debugging ke liye
       }
     });
 

@@ -179,7 +179,7 @@ export default function ReservationPage() {
                   <option value="04:00 P.M.">04:00 P.M.</option>
                 </optgroup>
                 <optgroup label="Dinner Time">
-                  <option value="07:00 p.M.">07:00 p.M.</option>
+                  <option value="07:00 P.M.">07:00 p.M.</option>
                   <option value="08:00 P.M.">08:00 P.M.</option>
                   <option value="09:00 P.M.">09:00 P.M.</option>
                   <option value="10:00 P.M.">10:00 P.M.</option>

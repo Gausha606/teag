@@ -19,7 +19,6 @@ export default function Littlebox() {
         scroller: "body",
         start: "top 50%",
         end: "30% 30%",
-        markers: true,
         scrub: false
       }
     })
